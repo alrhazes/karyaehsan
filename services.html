@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Karya Ehsan Sdn Bhd</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{kesb:{blue:'#00A3FF',navy:'#001F3F',dark:'#0a1628'}}}}}</script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+</head>
+<body class="bg-black text-gray-100 antialiased">
+
+  <nav class="fixed w-full z-50 top-0 navbar-blur border-b border-kesb-navy/50">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="index.html"><img src="assets/images/logo/kesb-logo-white.png" class="h-10" alt="KESB Logo"></a>
+      <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-800" aria-controls="navbar-menu"><span class="sr-only">Open menu</span><svg class="w-5 h-5" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg></button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-menu">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+          <li><a href="index.html" data-nav="index.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Home</a></li>
+          <li><a href="about.html" data-nav="about.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">About</a></li>
+          <li><a href="team.html" data-nav="team.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Team</a></li>
+          <li><a href="services.html" data-nav="services.html" class="block py-2 px-3 text-kesb-blue font-semibold">Services</a></li>
+          <li><a href="expertise.html" data-nav="expertise.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Expertise</a></li>
+          <li><a href="contact.html" data-nav="contact.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-bg pt-32 pb-16">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-gradient-kesb mb-4">Our Services</h1>
+      <p class="text-gray-400 text-lg max-w-2xl">Telecommunications infrastructure and fiber optic network facility services across Malaysia.</p>
+    </div>
+  </section>
+
+  <!-- Telecom Services Intro -->
+  <section id="telecom-services" class="py-16">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-4">Telecommunications Services</h2>
+      <p class="text-gray-400 mb-4">Karya Ehsan Sdn Bhd has been involved in a variety of telecommunication services, particularly telecommunication facility services. It has developed, constructed and managed many telecommunications infrastructure projects.</p>
+      <p class="text-gray-400 mb-8">It is KESB's pledge to provide the finest telecommunications infrastructure installation, construction and maintenance services that will surpass the growing communication needs of the region.</p>
+
+      <!-- Services Accordion -->
+      <div id="services-accordion" data-accordion="collapse" class="space-y-2">
+        <h3 class="text-xl font-semibold text-kesb-blue mb-4">Network Facility Services</h3>
+
+        <div class="rounded-xl glow-border overflow-hidden">
+          <h4 id="acc-heading-1">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-white bg-kesb-dark hover:bg-kesb-navy/50 gap-3" data-accordion-target="#acc-body-1" aria-expanded="true" aria-controls="acc-body-1">
+              <span>3.1 Site Acquisition</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+            </button>
+          </h4>
+          <div id="acc-body-1" class="block" aria-labelledby="acc-heading-1">
+            <div class="p-5 border-t border-kesb-navy/50 bg-black/30">
+              <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
+                <li>We acquire sites for major telecommunications service providers for their telecommunication tower facilities.</li>
+                <li>We have built strong and close relationship with key and strategic land and property (corporate) organizations as well as highway concessionaires for telecommunication service development.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl glow-border overflow-hidden">
+          <h4 id="acc-heading-2">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-white bg-kesb-dark hover:bg-kesb-navy/50 gap-3" data-accordion-target="#acc-body-2" aria-expanded="false" aria-controls="acc-body-2">
+              <span>3.2 Telecommunication Consultancy</span>
+              <svg data-accordion-icon class="w-3 h-3 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+            </button>
+          </h4>
+          <div id="acc-body-2" class="hidden" aria-labelledby="acc-heading-2">
+            <div class="p-5 border-t border-kesb-navy/50 bg-black/30">
+              <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
+                <li>We provide expertise in site surveys and site design.</li>
+                <li>We provide Local Authority liaison and permit submission services.</li>
+                <li>We provide expertise in legal documentation management and dispute resolution between customers and land owners or authorities.</li>
+                <li>We provide end-to-end Turn-Key tower development planning and management — from planning, site selection and preparation to technical guidance, tower installation, equipment installation and maintenance.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl glow-border overflow-hidden">
+          <h4 id="acc-heading-3">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-white bg-kesb-dark hover:bg-kesb-navy/50 gap-3" data-accordion-target="#acc-body-3" aria-expanded="false" aria-controls="acc-body-3">
+              <span>3.3 Engineering Services</span>
+              <svg data-accordion-icon class="w-3 h-3 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+            </button>
+          </h4>
+          <div id="acc-body-3" class="hidden" aria-labelledby="acc-heading-3">
+            <div class="p-5 border-t border-kesb-navy/50 bg-black/30">
+              <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
+                <li>Provides site surveys and site design services.</li>
+                <li>Equipment installation services.</li>
+                <li>We can supply and install mechanical and electrical facilities.</li>
+                <li>We provide end-to-end Turn-Key tower development planning and management.</li>
+                <li>From site acquisition to a fully functional telecommunication facility, we have detail orientated staff that successfully completes all projects precisely and on schedule.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl glow-border overflow-hidden">
+          <h4 id="acc-heading-4">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-white bg-kesb-dark hover:bg-kesb-navy/50 gap-3" data-accordion-target="#acc-body-4" aria-expanded="false" aria-controls="acc-body-4">
+              <span>3.4 Site Construction</span>
+              <svg data-accordion-icon class="w-3 h-3 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+            </button>
+          </h4>
+          <div id="acc-body-4" class="hidden" aria-labelledby="acc-heading-4">
+            <div class="p-5 border-t border-kesb-navy/50 bg-black/30">
+              <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
+                <li>Mobilize, construct and supervision site facility implementations.</li>
+                <li>Supply of structure components for installations.</li>
+                <li>Supply and install power system for site facilities employing "Renewable Energy" technology.</li>
+                <li>Provides end-to-end Turn-Key tower development and implementation — We have the knowledge, equipment and manpower to construct any size or type of tower.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl glow-border overflow-hidden">
+          <h4 id="acc-heading-5">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-white bg-kesb-dark hover:bg-kesb-navy/50 gap-3" data-accordion-target="#acc-body-5" aria-expanded="false" aria-controls="acc-body-5">
+              <span>3.5 Maintenance Services</span>
+              <svg data-accordion-icon class="w-3 h-3 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+            </button>
+          </h4>
+          <div id="acc-body-5" class="hidden" aria-labelledby="acc-heading-5">
+            <div class="p-5 border-t border-kesb-navy/50 bg-black/30">
+              <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
+                <li>Operations and maintenance of structure sites — our team can respond quickly and effectively to any emergency.</li>
+                <li>Maintenance of site landscape.</li>
+                <li>We have the know-how to conduct complete site audits which can be specifically tailored to each customer.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Carousel -->
+  <section class="py-16 bg-kesb-dark/50">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-8 text-center">Project Gallery</h2>
+      <div id="project-carousel" class="relative w-full" data-carousel="slide">
+        <div class="relative h-56 md:h-96 overflow-hidden rounded-xl glow-border">
+          <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <img src="assets/images/pdf/page-08-00.jpeg" class="absolute block w-full h-full object-cover" alt="KG Ayer Paabas - 30M RDS">
+            <div class="absolute bottom-0 left-0 right-0 bg-black/70 p-4"><p class="text-white font-semibold">KG Ayer Paabas — 30M RDS</p></div>
+          </div>
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="assets/images/pdf/page-08-01.jpeg" class="absolute block w-full h-full object-cover" alt="Surau Tmn Merlimau - 30M Lampole">
+            <div class="absolute bottom-0 left-0 right-0 bg-black/70 p-4"><p class="text-white font-semibold">Surau Tmn Merlimau — 30M Lampole</p></div>
+          </div>
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="assets/images/pdf/page-10-00.jpeg" class="absolute block w-full h-full object-cover" alt="Stadium Hang Jebat 2 - Erection in Progress">
+            <div class="absolute bottom-0 left-0 right-0 bg-black/70 p-4"><p class="text-white font-semibold">Stadium Hang Jebat 2 — Erection in Progress</p></div>
+          </div>
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="assets/images/pdf/page-10-04.jpeg" class="absolute block w-full h-full object-cover" alt="Stadium Hang Jebat 2 - Site Erection Completed">
+            <div class="absolute bottom-0 left-0 right-0 bg-black/70 p-4"><p class="text-white font-semibold">Stadium Hang Jebat 2 — Site Erection Completed</p></div>
+          </div>
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="assets/images/pdf/page-11-00.jpeg" class="absolute block w-full h-full object-cover" alt="Pole Structure">
+            <div class="absolute bottom-0 left-0 right-0 bg-black/70 p-4"><p class="text-white font-semibold">Pole Structure</p></div>
+          </div>
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="assets/images/pdf/page-11-01.jpeg" class="absolute block w-full h-full object-cover" alt="Monopole Tower">
+            <div class="absolute bottom-0 left-0 right-0 bg-black/70 p-4"><p class="text-white font-semibold">Monopole Tower</p></div>
+          </div>
+        </div>
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-prev>
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/50 group-hover:bg-black/80"><svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/></svg></span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-next>
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/50 group-hover:bg-black/80"><svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fiber Optic Services -->
+  <section id="fiber-services" class="py-16">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gradient-kesb mb-4">Fiber Optic Solutions</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">End-to-end fiber optic route access applications and project management, leveraging KESB's telecommunications infrastructure expertise across Malaysia.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl bg-kesb-dark glow-border card-hover">
+          <div class="w-10 h-10 rounded-lg bg-kesb-blue/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-kesb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Route Access</h3>
+          <p class="text-gray-400 text-sm">Fiber optic route access applications and coordination with authorities for network infrastructure deployment.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-kesb-dark glow-border card-hover">
+          <div class="w-10 h-10 rounded-lg bg-kesb-blue/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-kesb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Project Management</h3>
+          <p class="text-gray-400 text-sm">End-to-end fiber project coordination from planning and design through to implementation and handover.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-kesb-dark glow-border card-hover">
+          <div class="w-10 h-10 rounded-lg bg-kesb-blue/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-kesb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Authority Liaison</h3>
+          <p class="text-gray-400 text-sm">Local authority approvals, permit submissions and regulatory compliance for fiber infrastructure projects.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-kesb-dark glow-border card-hover">
+          <div class="w-10 h-10 rounded-lg bg-kesb-blue/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-kesb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Turnkey Delivery</h3>
+          <p class="text-gray-400 text-sm">Site-to-facility rollout expertise covering surveys, design, construction and equipment installation.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-kesb-dark glow-border card-hover">
+          <div class="w-10 h-10 rounded-lg bg-kesb-blue/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-kesb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Infrastructure Integration</h3>
+          <p class="text-gray-400 text-sm">Seamless integration of fiber networks with tower and site infrastructure for unified connectivity solutions.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-kesb-dark glow-border card-hover">
+          <div class="w-10 h-10 rounded-lg bg-kesb-blue/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-kesb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Operations & Maintenance</h3>
+          <p class="text-gray-400 text-sm">O&amp;M of structure sites with rapid emergency response and tailored site audit capabilities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-kesb-navy/50 border-t border-kesb-blue/20">
+    <div class="max-w-screen-xl mx-auto px-4 py-12">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div><img src="assets/images/logo/kesb-logo-white.png" class="h-12 mb-4" alt="KESB"><p class="text-gray-400 text-sm">Karya Ehsan Sdn Bhd — Telecommunications infrastructure support provider.</p></div>
+        <div><h4 class="text-white font-semibold mb-4">About</h4><ul class="space-y-2 text-sm"><li><a href="about.html" class="text-gray-400 hover:text-kesb-blue">Company Profile</a></li><li><a href="team.html" class="text-gray-400 hover:text-kesb-blue">Our Team</a></li></ul></div>
+        <div><h4 class="text-white font-semibold mb-4">Services</h4><ul class="space-y-2 text-sm"><li><a href="services.html#telecom-services" class="text-gray-400 hover:text-kesb-blue">Telecommunications</a></li><li><a href="services.html#fiber-services" class="text-gray-400 hover:text-kesb-blue">Fiber Optic</a></li></ul></div>
+        <div><h4 class="text-white font-semibold mb-4">Contact</h4><ul class="space-y-2 text-sm text-gray-400"><li><a href="tel:+60377315885" class="hover:text-kesb-blue">Tel: 03-7731 5885</a></li><li><a href="mailto:enquiry@karyaehsan.my" class="hover:text-kesb-blue">enquiry@karyaehsan.my</a></li></ul></div>
+      </div>
+      <div class="border-t border-kesb-blue/20 mt-8 pt-8 text-center text-sm text-gray-500">&copy; 2026 Karya Ehsan Sdn Bhd. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
