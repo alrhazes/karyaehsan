@@ -11,7 +11,7 @@
       theme: {
         extend: {
           colors: {
-            kesb: { blue: '#00A3FF', navy: '#001F3F', dark: '#0a1628' }
+            kesb: { blue: '#1B5FA8', navy: '#0C305C', dark: '#0C305C', page: '#F5F8FC' }
           }
         }
       }
@@ -20,26 +20,28 @@
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
 </head>
-<body class="bg-black text-gray-100 antialiased">
+<body class="bg-kesb-page text-slate-600 antialiased">
 
   <!-- Navbar -->
-  <nav class="fixed w-full z-50 top-0 navbar-blur border-b border-kesb-navy/50">
+  <nav class="fixed w-full z-50 top-0 navbar-blur border-b border-white/10">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="index.html" class="flex items-center space-x-3">
-        <img src="assets/images/logo/kesb-logo-white.png" class="h-10" alt="KESB Logo">
+        <img src="assets/images/logo/kesb-logo-horizontal.png" class="h-10 md:h-12 bg-white rounded-md px-2 py-1" alt="KESB Logo">
       </a>
-      <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none" aria-controls="navbar-menu" aria-expanded="false">
+      <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-white/10 focus:outline-none" aria-controls="navbar-menu" aria-expanded="false">
         <span class="sr-only">Open menu</span>
         <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg>
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-menu">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
-          <li><a href="index.html" data-nav="index.html" class="block py-2 px-3 text-kesb-blue font-semibold">Home</a></li>
-          <li><a href="about.html" data-nav="about.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">About</a></li>
-          <li><a href="team.html" data-nav="team.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Team</a></li>
-          <li><a href="services.html" data-nav="services.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Services</a></li>
-          <li><a href="expertise.html" data-nav="expertise.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Expertise</a></li>
-          <li><a href="contact.html" data-nav="contact.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Contact</a></li>
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-white/20 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+          <li><a href="index.html" data-nav="index.html" class="block py-2 px-3 text-white font-semibold">Home</a></li>
+          <li><a href="about.html" data-nav="about.html" class="block py-2 px-3 text-white/80 hover:text-white">About</a></li>
+          <li><a href="team.html" data-nav="team.html" class="block py-2 px-3 text-white/80 hover:text-white">Team</a></li>
+          <li><a href="services.html" data-nav="services.html" class="block py-2 px-3 text-white/80 hover:text-white">Services</a></li>
+          <li><a href="expertise.html" data-nav="expertise.html" class="block py-2 px-3 text-white/80 hover:text-white">Expertise</a></li>
+          <li>
+            <a href="contact.html" class="block md:inline-flex text-center px-4 py-2.5 mt-2 md:mt-0 text-sm font-semibold text-kesb-navy bg-white rounded-lg hover:bg-slate-100">Get in Touch</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -64,13 +66,13 @@
     <div class="jumbotron-content max-w-screen-xl mx-auto px-4 w-full">
       <div class="max-w-3xl">
         <div class="mb-6 md:mb-8 space-y-1">
-          <p class="hero-keyword text-kesb-blue text-sm md:text-base tracking-[0.3em] uppercase font-light">Technology</p>
-          <p class="hero-keyword text-kesb-blue text-sm md:text-base tracking-[0.3em] uppercase font-light">Service</p>
-          <p class="hero-keyword text-kesb-blue text-sm md:text-base tracking-[0.3em] uppercase font-light">Connectivity</p>
-          <p class="hero-keyword text-kesb-blue text-sm md:text-base tracking-[0.3em] uppercase font-light">Infrastructure</p>
+          <p class="hero-keyword text-blue-200 text-sm md:text-base tracking-[0.3em] uppercase font-light">Technology</p>
+          <p class="hero-keyword text-blue-200 text-sm md:text-base tracking-[0.3em] uppercase font-light">Service</p>
+          <p class="hero-keyword text-blue-200 text-sm md:text-base tracking-[0.3em] uppercase font-light">Connectivity</p>
+          <p class="hero-keyword text-blue-200 text-sm md:text-base tracking-[0.3em] uppercase font-light">Infrastructure</p>
         </div>
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
-          <span class="text-gradient-kesb">Preferred Telecommunications</span><br>
+          <span class="text-gradient-hero">Preferred Telecommunications</span><br>
           Infrastructure Support Provider<br>
           <span class="text-white">in Southeast Asia</span>
         </h1>
@@ -78,11 +80,11 @@
           End-to-end telecommunications infrastructure solutions — from site acquisition and engineering to construction, fiber optic rollout, and maintenance across Malaysia.
         </p>
         <div class="flex flex-wrap gap-3 md:gap-4">
-          <a href="services.html" class="inline-flex items-center px-5 py-2.5 md:px-6 md:py-3 text-sm font-semibold text-white bg-gradient-kesb rounded-lg hover:opacity-90 glow-border">
+          <a href="services.html" class="inline-flex items-center px-5 py-2.5 md:px-6 md:py-3 text-sm font-semibold text-white bg-gradient-kesb rounded-lg hover:opacity-90">
             Our Services
             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
-          <a href="contact.html" class="inline-flex items-center px-5 py-2.5 md:px-6 md:py-3 text-sm font-semibold text-kesb-blue border border-kesb-blue/50 rounded-lg hover:bg-kesb-blue/10 bg-black/40 backdrop-blur-sm">
+          <a href="contact.html" class="inline-flex items-center px-5 py-2.5 md:px-6 md:py-3 text-sm font-semibold text-white border border-white/60 rounded-lg hover:bg-white/10 bg-white/10 backdrop-blur-sm">
             Contact Us
           </a>
         </div>
@@ -92,27 +94,31 @@
     <!-- Bottom bar: caption + dots -->
     <div class="jumbotron-footer">
       <div class="jumbotron-caption active" data-caption="0">
-        <p class="text-kesb-blue text-xs uppercase tracking-widest font-semibold mb-0.5">Telecommunication Tower Project</p>
+        <p class="text-blue-200 text-xs uppercase tracking-widest font-semibold mb-0.5">Telecommunication Tower Project</p>
         <p class="text-white text-sm md:text-lg font-bold">Monopole Tower Installation</p>
       </div>
       <div class="jumbotron-caption" data-caption="1">
-        <p class="text-kesb-blue text-xs uppercase tracking-widest font-semibold mb-0.5">Site Construction</p>
+        <p class="text-blue-200 text-xs uppercase tracking-widest font-semibold mb-0.5">Site Construction</p>
         <p class="text-white text-sm md:text-lg font-bold">Tower Foundation &amp; Erection</p>
       </div>
       <div class="jumbotron-caption" data-caption="2">
-        <p class="text-kesb-blue text-xs uppercase tracking-widest font-semibold mb-0.5">Operations &amp; Maintenance</p>
+        <p class="text-blue-200 text-xs uppercase tracking-widest font-semibold mb-0.5">Operations &amp; Maintenance</p>
         <p class="text-white text-sm md:text-lg font-bold">Telecommunications Infrastructure</p>
       </div>
       <div class="jumbotron-dots" aria-label="Hero slideshow navigation">
         <button class="jumbotron-dot active" data-target="0" aria-label="Slide 1"></button>
         <button class="jumbotron-dot" data-target="1" aria-label="Slide 2"></button>
         <button class="jumbotron-dot" data-target="2" aria-label="Slide 3"></button>
+        <button type="button" class="jumbotron-pause" id="jumbotron-pause" aria-label="Pause slideshow" aria-pressed="false">
+          <svg class="jumbotron-pause-icon" viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="1" width="3" height="10"/><rect x="7" y="1" width="3" height="10"/></svg>
+          <svg class="jumbotron-play-icon hidden" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9l8-4.5z"/></svg>
+        </button>
       </div>
     </div>
   </section>
 
   <!-- NFP Badge -->
-  <section class="py-8 bg-kesb-navy/30 border-y border-kesb-blue/20">
+  <section class="py-8 bg-white border-y border-slate-200">
     <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
       <div class="flex items-center gap-3">
         <div class="w-12 h-12 rounded-full bg-kesb-blue/20 flex items-center justify-center">
@@ -120,10 +126,34 @@
         </div>
         <div>
           <p class="text-kesb-blue font-semibold text-sm uppercase tracking-wider">Licensed Network Facility Provider</p>
-          <p class="text-gray-400 text-sm">Awarded NFP License on 14 July 2021 by the Government of Malaysia</p>
+          <p class="text-slate-500 text-sm">Awarded NFP License on 14 July 2021 by the Government of Malaysia</p>
         </div>
       </div>
       <a href="about.html#nfp-license" class="text-kesb-blue text-sm hover:underline">View License Details &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Key facts -->
+  <section class="py-12 border-b border-slate-200 bg-kesb-page">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="text-3xl font-bold text-kesb-blue">2015</p>
+          <p class="text-slate-500 text-sm mt-1">Incorporated in Malaysia</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-kesb-blue">2021</p>
+          <p class="text-slate-500 text-sm mt-1">NFP licence awarded</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-kesb-blue">100%</p>
+          <p class="text-slate-500 text-sm mt-1">Bumiputra company</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-kesb-blue">Malaysia</p>
+          <p class="text-slate-500 text-sm mt-1">Nationwide project coverage</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -135,48 +165,50 @@
         <div class="section-divider w-24 mx-auto"></div>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="p-8 rounded-xl bg-kesb-dark glow-border card-hover">
-          <div class="w-12 h-12 rounded-lg bg-kesb-blue/20 flex items-center justify-center mb-4">
+        <div class="p-8 rounded-xl bg-white glow-border card-hover">
+          <div class="w-12 h-12 rounded-lg bg-kesb-blue/10 flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-kesb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
           </div>
-          <h3 class="text-xl font-bold text-white mb-3">Our Vision</h3>
-          <p class="text-gray-400">To be the preferred telecommunications infrastructure support provider in the Southeast Asia region.</p>
+          <h3 class="text-xl font-bold text-kesb-navy mb-3">Our Vision</h3>
+          <p class="text-slate-600">To be the preferred telecommunications infrastructure support provider in the Southeast Asia region.</p>
         </div>
-        <div class="p-8 rounded-xl bg-kesb-dark glow-border card-hover">
-          <div class="w-12 h-12 rounded-lg bg-kesb-blue/20 flex items-center justify-center mb-4">
+        <div class="p-8 rounded-xl bg-white glow-border card-hover">
+          <div class="w-12 h-12 rounded-lg bg-kesb-blue/10 flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-kesb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
-          <h3 class="text-xl font-bold text-white mb-3">Our Mission</h3>
-          <p class="text-gray-400">To exceed customer's expectations through focus on speed, harnessing of innovation and devotion to quality.</p>
+          <h3 class="text-xl font-bold text-kesb-navy mb-3">Our Mission</h3>
+          <p class="text-slate-600">To exceed customer's expectations through focus on speed, harnessing of innovation and devotion to quality.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Service Preview Cards -->
-  <section class="py-20 bg-kesb-dark/50">
+  <section class="py-20 bg-white">
     <div class="max-w-screen-xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Services</h2>
-        <p class="text-gray-400 max-w-2xl mx-auto">Comprehensive telecommunications infrastructure and network facility services across Malaysia.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-kesb-navy mb-4">Our Services</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">Comprehensive telecommunications infrastructure and network facility services across Malaysia.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
         <a href="services.html#telecom-services" class="group relative overflow-hidden rounded-xl glow-border card-hover">
-          <div class="absolute inset-0 bg-gradient-to-br from-kesb-blue/20 to-kesb-navy/40"></div>
+          <img src="assets/images/hero/hero-1-monopole-site.jpg" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/20"></div>
           <div class="relative p-8 md:p-12 min-h-[280px] flex flex-col justify-end">
             <h3 class="text-2xl font-bold text-white mb-2">Telecommunications Infrastructure</h3>
             <p class="text-gray-300 mb-4">Site acquisition, consultancy, engineering, construction and maintenance for telecom tower facilities.</p>
-            <span class="inline-flex items-center text-kesb-blue font-semibold group-hover:translate-x-2 transition-transform">
+            <span class="inline-flex items-center text-blue-200 font-semibold group-hover:translate-x-2 transition-transform">
               Learn More <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </span>
           </div>
         </a>
         <a href="services.html#fiber-services" class="group relative overflow-hidden rounded-xl glow-border card-hover">
-          <div class="absolute inset-0 bg-gradient-to-br from-kesb-navy/60 to-kesb-blue/20"></div>
+          <img src="assets/images/hero/hero-2-site-construction.jpg" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/20"></div>
           <div class="relative p-8 md:p-12 min-h-[280px] flex flex-col justify-end">
             <h3 class="text-2xl font-bold text-white mb-2">Fiber Optic Solutions</h3>
             <p class="text-gray-300 mb-4">Fiber optic route access applications, project management, and end-to-end network infrastructure rollout.</p>
-            <span class="inline-flex items-center text-kesb-blue font-semibold group-hover:translate-x-2 transition-transform">
+            <span class="inline-flex items-center text-blue-200 font-semibold group-hover:translate-x-2 transition-transform">
               Learn More <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </span>
           </div>
@@ -191,17 +223,17 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-3xl md:text-4xl font-bold text-gradient-kesb mb-6">About KESB</h2>
-          <p class="text-gray-400 mb-4">
+          <p class="text-slate-600 mb-4">
             Karya Ehsan Sdn Bhd ("KESB") was incorporated on 9 September 2015 in Malaysia and is a 100% Bumiputra company. KESB is a specialist in telecommunications infrastructure projects providing end-to-end solutions including site acquisition, engineering, construction and installation.
           </p>
-          <p class="text-gray-400 mb-6">
+          <p class="text-slate-600 mb-6">
             KESB also provides consultancy, project management and site maintenance services for telecommunications projects throughout Malaysia. KESB's skill and strong principles have gained trust from many service providers including incumbent telecommunications service providers.
           </p>
           <a href="about.html" class="inline-flex items-center text-kesb-blue font-semibold hover:underline">
             Learn More About Us <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
         </div>
-        <div class="rounded-xl overflow-hidden glow-border">
+        <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm">
           <img src="assets/images/pdf/page-08-00.jpeg" alt="KG Ayer Paabas - 30M RDS" class="w-full h-64 object-cover">
         </div>
       </div>
@@ -209,13 +241,22 @@
   </section>
 
   <!-- Client Logos -->
-  <section class="py-16 bg-kesb-dark/50 border-y border-kesb-navy/50">
+  <section class="py-16 bg-white border-y border-slate-200">
     <div class="max-w-screen-xl mx-auto px-4">
-      <p class="text-center text-gray-400 text-sm uppercase tracking-wider mb-8">Trusted by Leading Organizations</p>
+      <p class="text-center text-slate-500 text-sm uppercase tracking-wider mb-8">Trusted by Leading Organizations</p>
       <div class="flex flex-wrap items-center justify-center gap-12">
-        <img src="assets/images/pdf/page-14-00.jpeg" alt="MICTH" class="h-16 object-contain brightness-110">
-        <img src="assets/images/pdf/page-14-01.jpeg" alt="Areno Resources" class="h-16 object-contain brightness-110">
-        <img src="assets/images/pdf/page-14-02.jpeg" alt="Client" class="h-16 object-contain brightness-110">
+        <figure class="text-center">
+          <img src="assets/images/pdf/page-14-00.jpeg" alt="MICTH" class="h-16 object-contain mx-auto">
+          <figcaption class="text-slate-500 text-xs mt-2">MICTH</figcaption>
+        </figure>
+        <figure class="text-center">
+          <img src="assets/images/pdf/page-14-01.jpeg" alt="Areno Resources" class="h-16 object-contain mx-auto">
+          <figcaption class="text-slate-500 text-xs mt-2">Areno Resources</figcaption>
+        </figure>
+        <figure class="text-center">
+          <img src="assets/images/pdf/page-14-02.jpeg" alt="Industry partner" class="h-16 object-contain mx-auto">
+          <figcaption class="text-slate-500 text-xs mt-2">Industry partner</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -223,50 +264,50 @@
   <!-- CTA -->
   <section class="py-20">
     <div class="max-w-screen-xl mx-auto px-4 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Connect?</h2>
-      <p class="text-gray-400 mb-8 max-w-xl mx-auto">Get in touch with our team to discuss your telecommunications infrastructure needs.</p>
-      <a href="contact.html" class="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-kesb rounded-lg hover:opacity-90 glow-border">
+      <h2 class="text-3xl md:text-4xl font-bold text-kesb-navy mb-4">Ready to Connect?</h2>
+      <p class="text-slate-600 mb-8 max-w-xl mx-auto">Get in touch with our team to discuss your telecommunications infrastructure needs.</p>
+      <a href="contact.html" class="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-kesb rounded-lg hover:opacity-90">
         Get In Touch With Us
       </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-kesb-navy/50 border-t border-kesb-blue/20">
+  <footer class="bg-kesb-navy">
     <div class="max-w-screen-xl mx-auto px-4 py-12">
       <div class="grid md:grid-cols-4 gap-8">
         <div>
-          <img src="assets/images/logo/kesb-logo-white.png" class="h-12 mb-4" alt="KESB">
-          <p class="text-gray-400 text-sm">Karya Ehsan Sdn Bhd — Telecommunications infrastructure support provider in Southeast Asia.</p>
+          <img src="assets/images/logo/kesb-logo.png" class="h-16 mb-4 bg-white rounded-md p-1" alt="KESB">
+          <p class="text-white/70 text-sm">Karya Ehsan Sdn Bhd — Telecommunications infrastructure support provider in Southeast Asia.</p>
         </div>
         <div>
           <h4 class="text-white font-semibold mb-4">About</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="about.html" class="text-gray-400 hover:text-kesb-blue">Company Profile</a></li>
-            <li><a href="team.html" class="text-gray-400 hover:text-kesb-blue">Our Team</a></li>
-            <li><a href="about.html#nfp-license" class="text-gray-400 hover:text-kesb-blue">NFP License</a></li>
+            <li><a href="about.html" class="text-white/70 hover:text-white">Company Profile</a></li>
+            <li><a href="team.html" class="text-white/70 hover:text-white">Our Team</a></li>
+            <li><a href="about.html#nfp-license" class="text-white/70 hover:text-white">NFP License</a></li>
           </ul>
         </div>
         <div>
           <h4 class="text-white font-semibold mb-4">Services</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="services.html#telecom-services" class="text-gray-400 hover:text-kesb-blue">Telecommunications</a></li>
-            <li><a href="services.html#fiber-services" class="text-gray-400 hover:text-kesb-blue">Fiber Optic</a></li>
-            <li><a href="expertise.html" class="text-gray-400 hover:text-kesb-blue">Our Expertise</a></li>
+            <li><a href="services.html#telecom-services" class="text-white/70 hover:text-white">Telecommunications</a></li>
+            <li><a href="services.html#fiber-services" class="text-white/70 hover:text-white">Fiber Optic</a></li>
+            <li><a href="expertise.html" class="text-white/70 hover:text-white">Our Expertise</a></li>
           </ul>
         </div>
         <div>
           <h4 class="text-white font-semibold mb-4">Contact</h4>
-          <ul class="space-y-2 text-sm text-gray-400">
+          <ul class="space-y-2 text-sm text-white/70">
             <li>A-01-01, Block A, Glomac Damansara</li>
             <li>No.699, Jalan Damansara</li>
             <li>60000 Kuala Lumpur</li>
-            <li class="pt-2"><a href="tel:+60377315885" class="hover:text-kesb-blue">Tel: 03-7731 5885</a></li>
-            <li><a href="mailto:enquiry@karyaehsan.my" class="hover:text-kesb-blue">enquiry@karyaehsan.my</a></li>
+            <li class="pt-2"><a href="tel:+60377315885" class="hover:text-white">Tel: 03-7731 5885</a></li>
+            <li><a href="mailto:enquiry@karyaehsan.my" class="hover:text-white">enquiry@karyaehsan.my</a></li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-kesb-blue/20 mt-8 pt-8 text-center text-sm text-gray-500">
+      <div class="border-t border-white/15 mt-8 pt-8 text-center text-sm text-white/50">
         &copy; 2026 Karya Ehsan Sdn Bhd. All Rights Reserved.
       </div>
     </div>

@@ -5,55 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Team | Karya Ehsan Sdn Bhd</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{kesb:{blue:'#00A3FF',navy:'#001F3F',dark:'#0a1628'}}}}}</script>
+  <script>tailwind.config={theme:{extend:{colors:{kesb:{blue:'#1B5FA8',navy:'#0C305C',dark:'#0C305C',page:'#F5F8FC'}}}}}</script>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
 </head>
-<body class="bg-black text-gray-100 antialiased">
+<body class="bg-kesb-page text-slate-600 antialiased">
 
-  <nav class="fixed w-full z-50 top-0 navbar-blur border-b border-kesb-navy/50">
+  <nav class="fixed w-full z-50 top-0 navbar-blur border-b border-white/10">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="index.html"><img src="assets/images/logo/kesb-logo-white.png" class="h-10" alt="KESB Logo"></a>
-      <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-800" aria-controls="navbar-menu"><span class="sr-only">Open menu</span><svg class="w-5 h-5" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg></button>
+      <a href="index.html"><img src="assets/images/logo/kesb-logo-horizontal.png" class="h-10 md:h-12 bg-white rounded-md px-2 py-1" alt="KESB Logo"></a>
+      <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-white/10" aria-controls="navbar-menu"><span class="sr-only">Open menu</span><svg class="w-5 h-5" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg></button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-menu">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
-          <li><a href="index.html" data-nav="index.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Home</a></li>
-          <li><a href="about.html" data-nav="about.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">About</a></li>
-          <li><a href="team.html" data-nav="team.html" class="block py-2 px-3 text-kesb-blue font-semibold">Team</a></li>
-          <li><a href="services.html" data-nav="services.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Services</a></li>
-          <li><a href="expertise.html" data-nav="expertise.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Expertise</a></li>
-          <li><a href="contact.html" data-nav="contact.html" class="block py-2 px-3 text-gray-300 hover:text-kesb-blue">Contact</a></li>
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-white/20 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+          <li><a href="index.html" data-nav="index.html" class="block py-2 px-3 text-white/80 hover:text-white">Home</a></li>
+          <li><a href="about.html" data-nav="about.html" class="block py-2 px-3 text-white/80 hover:text-white">About</a></li>
+          <li><a href="team.html" data-nav="team.html" class="block py-2 px-3 text-white font-semibold">Team</a></li>
+          <li><a href="services.html" data-nav="services.html" class="block py-2 px-3 text-white/80 hover:text-white">Services</a></li>
+          <li><a href="expertise.html" data-nav="expertise.html" class="block py-2 px-3 text-white/80 hover:text-white">Expertise</a></li>
+          <li>
+            <a href="contact.html" class="block md:inline-flex text-center px-4 py-2.5 mt-2 md:mt-0 text-sm font-semibold text-kesb-navy bg-white rounded-lg hover:bg-slate-100">Get in Touch</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <section class="hero-bg pt-32 pb-16">
-    <div class="max-w-screen-xl mx-auto px-4">
-      <h1 class="text-4xl md:text-5xl font-bold text-gradient-kesb mb-4">Our People</h1>
-      <p class="text-gray-400 text-lg max-w-2xl">The committed professionals driving KESB's success in telecommunications infrastructure.</p>
+  <section class="page-hero">
+    <div class="page-hero-media" aria-hidden="true">
+      <img src="assets/images/hero/hero-3-tower-operations-1920.jpg" alt="">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content max-w-screen-xl mx-auto px-4">
+      <p class="text-sm text-white/70 mb-3"><a href="index.html" class="hover:text-white">Home</a> <span class="mx-2">/</span> Team</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Our People</h1>
+      <p class="text-white/90 text-lg max-w-2xl">The committed professionals driving KESB's telecommunications infrastructure work.</p>
     </div>
   </section>
 
   <!-- Our People -->
   <section class="py-16">
     <div class="max-w-screen-xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-white mb-6">Our People</h2>
-      <p class="text-gray-400 mb-4">Besides our industry partners and suppliers, KESB's greatest asset is its people who form the foundation of our organisation. The commitment, experience and expertise of the KESB team are the factors that drive the company to the forefront of the industry.</p>
-      <p class="text-gray-400 mb-4">Our staffs are highly skilled, qualified and are dedicated with technical and management expertise ready to provide the solutions and assistance to our customers at all times. We believe in investing in our staffs and they are consistently updated with the latest technology solutions and developments of the industry through attending variety of trainings, seminars and conferences both locally and internationally.</p>
-      <p class="text-gray-400 mb-4">Building on this, KESB has developed the technology and know-how to perform end-to-end site acquisition, development and management. This capability to establish large-scale infrastructure at a fast pace has enabled KESB to deliver difficult and challenging solutions at the shortest time possible.</p>
-      <p class="text-gray-400">The key pillar of KESB in taking it forward is by far its organization as well as its highly capable and committed value chain. Despite the size of its operations, KESB has retained much of its leanness. With a comparatively flat organization, communications is very fluid throughout the chain of command, allowing for smooth information flow and swifter results.</p>
+      <p class="text-slate-600 mb-4 max-w-3xl">KESB's greatest asset is its people. Our team combines technical and management expertise, and stays current through training, seminars and conferences in Malaysia and abroad.</p>
+      <p class="text-slate-600 max-w-3xl">Despite the scale of our projects, we keep a lean, relatively flat organisation so communication stays fast and decisions move quickly.</p>
     </div>
   </section>
 
   <!-- Management Structure -->
-  <section class="py-16 bg-kesb-dark/50">
+  <section class="py-16 bg-white">
     <div class="max-w-screen-xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-white mb-4">Management Structure</h2>
-      <p class="text-gray-400 mb-8">KESB has a team of experienced key professionals with elaborate background from various backgrounds in ICT industry who are able to provide solutions for telecommunications service providers' facility development and management, consultancy and outsourcing.</p>
-      <div class="rounded-xl overflow-hidden glow-border bg-black">
+      <h2 class="text-2xl font-bold text-kesb-navy mb-4">Management Structure</h2>
+      <p class="text-slate-600 mb-8 max-w-3xl">Experienced professionals across administration, finance, projects and production — supporting facility development, consultancy and outsourcing for telecommunications service providers.</p>
+      <button type="button" class="block w-full rounded-xl overflow-hidden border border-slate-200 bg-black text-left" data-lightbox="assets/images/management-structure.png" data-alt="KESB Management Structure">
         <img src="assets/images/management-structure.png" alt="KESB Management Structure" class="w-full">
-      </div>
+      </button>
+      <p class="text-slate-500 text-xs mt-3 text-center md:hidden">Tap the chart to enlarge</p>
     </div>
   </section>
 
@@ -62,57 +67,59 @@
     <div class="max-w-screen-xl mx-auto px-4">
       <h2 class="text-2xl font-bold text-gradient-kesb mb-8">Board of Directors</h2>
       <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-        <div class="p-8 rounded-xl bg-kesb-dark glow-border card-hover text-center">
+        <div class="p-8 rounded-xl bg-white glow-border card-hover text-center">
           <div class="w-20 h-20 rounded-full bg-gradient-kesb mx-auto mb-4 flex items-center justify-center">
             <span class="text-2xl font-bold text-white">MY</span>
           </div>
-          <h3 class="text-xl font-bold text-white mb-1">Mohd Yusof Bin Ahmad</h3>
+          <h3 class="text-xl font-bold text-kesb-navy mb-1">Mohd Yusof Bin Ahmad</h3>
           <p class="text-kesb-blue text-sm font-medium">Director</p>
         </div>
-        <div class="p-8 rounded-xl bg-kesb-dark glow-border card-hover text-center">
+        <div class="p-8 rounded-xl bg-white glow-border card-hover text-center">
           <div class="w-20 h-20 rounded-full bg-gradient-kesb mx-auto mb-4 flex items-center justify-center">
             <span class="text-2xl font-bold text-white">MF</span>
           </div>
-          <h3 class="text-xl font-bold text-white mb-1">Mohamad Faizal Bin Mohamad Ibrahim</h3>
+          <h3 class="text-xl font-bold text-kesb-navy mb-1">Mohamad Faizal Bin Mohamad Ibrahim</h3>
           <p class="text-kesb-blue text-sm font-medium">Director</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Org Highlights -->
-  <section class="py-16 bg-kesb-dark/50">
-    <div class="max-w-screen-xl mx-auto px-4">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="p-6 rounded-xl glow-border text-center">
-          <p class="text-3xl font-bold text-kesb-blue mb-2">Flat</p>
-          <p class="text-gray-400 text-sm">Organizational structure for fluid communication</p>
-        </div>
-        <div class="p-6 rounded-xl glow-border text-center">
-          <p class="text-3xl font-bold text-kesb-blue mb-2">Lean</p>
-          <p class="text-gray-400 text-sm">Agile operations despite scale of projects</p>
-        </div>
-        <div class="p-6 rounded-xl glow-border text-center">
-          <p class="text-3xl font-bold text-kesb-blue mb-2">Skilled</p>
-          <p class="text-gray-400 text-sm">Technical and management expertise on demand</p>
-        </div>
-        <div class="p-6 rounded-xl glow-border text-center">
-          <p class="text-3xl font-bold text-kesb-blue mb-2">Committed</p>
-          <p class="text-gray-400 text-sm">Dedicated value chain delivering results</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-kesb-navy/50 border-t border-kesb-blue/20">
+    <footer class="bg-kesb-navy">
     <div class="max-w-screen-xl mx-auto px-4 py-12">
       <div class="grid md:grid-cols-4 gap-8">
-        <div><img src="assets/images/logo/kesb-logo-white.png" class="h-12 mb-4" alt="KESB"><p class="text-gray-400 text-sm">Karya Ehsan Sdn Bhd — Telecommunications infrastructure support provider.</p></div>
-        <div><h4 class="text-white font-semibold mb-4">About</h4><ul class="space-y-2 text-sm"><li><a href="about.html" class="text-gray-400 hover:text-kesb-blue">Company Profile</a></li><li><a href="team.html" class="text-gray-400 hover:text-kesb-blue">Our Team</a></li></ul></div>
-        <div><h4 class="text-white font-semibold mb-4">Services</h4><ul class="space-y-2 text-sm"><li><a href="services.html" class="text-gray-400 hover:text-kesb-blue">All Services</a></li></ul></div>
-        <div><h4 class="text-white font-semibold mb-4">Contact</h4><ul class="space-y-2 text-sm text-gray-400"><li><a href="tel:+60377315885" class="hover:text-kesb-blue">Tel: 03-7731 5885</a></li><li><a href="mailto:enquiry@karyaehsan.my" class="hover:text-kesb-blue">enquiry@karyaehsan.my</a></li></ul></div>
+        <div>
+          <img src="assets/images/logo/kesb-logo.png" class="h-16 mb-4 bg-white rounded-md p-1" alt="KESB">
+          <p class="text-white/70 text-sm">Karya Ehsan Sdn Bhd — Telecommunications infrastructure support provider in Southeast Asia.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">About</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-white/70 hover:text-white">Company Profile</a></li>
+            <li><a href="team.html" class="text-white/70 hover:text-white">Our Team</a></li>
+            <li><a href="about.html#nfp-license" class="text-white/70 hover:text-white">NFP License</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="services.html#telecom-services" class="text-white/70 hover:text-white">Telecommunications</a></li>
+            <li><a href="services.html#fiber-services" class="text-white/70 hover:text-white">Fiber Optic</a></li>
+            <li><a href="expertise.html" class="text-white/70 hover:text-white">Our Expertise</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li>A-01-01, Block A, Glomac Damansara</li>
+            <li>No.699, Jalan Damansara</li>
+            <li>60000 Kuala Lumpur</li>
+            <li class="pt-2"><a href="tel:+60377315885" class="hover:text-white">Tel: 03-7731 5885</a></li>
+            <li><a href="mailto:enquiry@karyaehsan.my" class="hover:text-white">enquiry@karyaehsan.my</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="border-t border-kesb-blue/20 mt-8 pt-8 text-center text-sm text-gray-500">&copy; 2026 Karya Ehsan Sdn Bhd. All Rights Reserved.</div>
+      <div class="border-t border-white/15 mt-8 pt-8 text-center text-sm text-white/50">&copy; 2026 Karya Ehsan Sdn Bhd. All Rights Reserved.</div>
     </div>
   </footer>
 
