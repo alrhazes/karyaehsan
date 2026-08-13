@@ -562,6 +562,102 @@ body {
   }
 }
 
+/* Telecom services timeline */
+.service-flow {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.service-flow::before {
+  content: "";
+  position: absolute;
+  top: 1.25rem;
+  bottom: 1.25rem;
+  left: 1.15rem;
+  width: 2px;
+  background: #1B5FA8;
+  opacity: 0.22;
+}
+
+.service-flow > li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  margin: 0;
+  padding: 0 0 1.25rem;
+}
+
+.service-flow > li:last-child {
+  padding-bottom: 0;
+}
+
+.service-flow-index {
+  flex-shrink: 0;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 999px;
+  background: #1B5FA8;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 0 4px #F5F8FC;
+}
+
+.service-flow-card {
+  flex: 1;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem 1.1rem 1.1rem;
+  box-shadow: 0 1px 3px rgba(12, 48, 92, 0.08);
+}
+
+.service-flow-card h3 {
+  margin: 0 0 0.65rem;
+  color: #0C305C;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.service-flow-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-flow-card li {
+  display: block;
+  padding: 0 0 0.45rem 0.9rem;
+  position: relative;
+  color: #475569;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.service-flow-card li:last-child {
+  padding-bottom: 0;
+}
+
+.service-flow-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #1B5FA8;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-keyword {
     opacity: 1;
