@@ -415,7 +415,8 @@ body {
   background: #9ca3af;
 }
 
-.org-node--prod::after {
+.org-node--prod::after,
+.org-node--fiber::after {
   background: #0f766e;
 }
 
@@ -454,12 +455,18 @@ body {
 .org-legend-dot--board { background: #2563eb; }
 .org-legend-dot--admin { background: #eab308; }
 .org-legend-dot--project { background: #9ca3af; }
-.org-legend-dot--prod { background: #0f766e; }
+.org-legend-dot--prod,
+.org-legend-dot--fiber { background: #0f766e; }
 
 @media (min-width: 1024px) {
   .org-wrap {
-    padding: 1.75rem 0.75rem 1.25rem;
+    padding: 1.75rem 1.25rem 1.25rem;
     overflow-x: auto;
+  }
+
+  .org-chart {
+    width: max-content;
+    min-width: 100%;
   }
 
   .org-chart ul {
@@ -469,6 +476,12 @@ body {
     padding-top: var(--org-gap);
     margin: 0;
     border-left: 0;
+  }
+
+  .org-chart > ul {
+    width: max-content;
+    min-width: 100%;
+    margin-inline: auto;
   }
 
   .org-chart ul ul {
