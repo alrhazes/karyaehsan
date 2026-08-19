@@ -10,8 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const navAliases = {
+    'telecommunications.html': 'services.html',
+    'fiber-optic.html': 'services.html',
+  };
+  const activeNav = navAliases[currentPage] || currentPage;
   document.querySelectorAll('[data-nav]').forEach((link) => {
-    if (link.getAttribute('data-nav') === currentPage) {
+    if (link.getAttribute('data-nav') === activeNav) {
       link.classList.add('text-white', 'font-semibold');
       link.classList.remove('text-white/80');
     }
