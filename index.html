@@ -56,14 +56,43 @@
   <section class="jumbotron" id="hero-jumbotron">
     <div class="jumbotron-media" aria-hidden="true">
       <div class="jumbotron-slide active" data-slide="0">
-        <img src="assets/images/hero/hero-sky-tower.jpg" alt="Telecommunications tower against open sky">
+        <img src="assets/images/hero/hero-coastal.jpg" alt="Hilltop telecom towers overlooking the coast">
       </div>
       <div class="jumbotron-slide" data-slide="1">
-        <img src="assets/images/hero/hero-coastal.jpg" alt="Hilltop telecom towers overlooking the coast">
+        <img src="assets/images/stock/fiber-cables.jpg" alt="Fiber optic connections in a network panel" class="jumbotron-img-fiber">
       </div>
       <div class="jumbotron-slide" data-slide="2">
         <img src="assets/images/hero/hero-sunset.jpg" alt="Telecommunications tower at dusk">
       </div>
+    </div>
+    <div class="jumbotron-network" aria-hidden="true">
+      <svg class="jumbotron-network-svg" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <defs>
+          <linearGradient id="netStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#93c5fd" stop-opacity="0"/>
+            <stop offset="45%" stop-color="#93c5fd" stop-opacity="0.85"/>
+            <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g class="jumbotron-network-arcs" fill="none" stroke="url(#netStroke)" stroke-width="1.25" stroke-linecap="round">
+          <path d="M80 520 C 320 220, 620 180, 980 360"/>
+          <path d="M160 610 C 420 340, 760 280, 1180 480"/>
+          <path d="M40 380 C 280 140, 700 120, 1260 300"/>
+          <path d="M220 700 C 520 480, 860 420, 1320 560"/>
+        </g>
+        <g class="jumbotron-network-nodes" fill="#bfdbfe">
+          <circle cx="320" cy="250" r="3.5"/>
+          <circle cx="620" cy="190" r="2.5"/>
+          <circle cx="980" cy="360" r="3"/>
+          <circle cx="420" cy="360" r="2.5"/>
+          <circle cx="760" cy="300" r="3.5"/>
+          <circle cx="1180" cy="480" r="2.5"/>
+          <circle cx="700" cy="150" r="2"/>
+          <circle cx="1260" cy="300" r="3"/>
+          <circle cx="520" cy="500" r="2.5"/>
+          <circle cx="860" cy="430" r="2"/>
+        </g>
+      </svg>
     </div>
     <div class="jumbotron-overlay"></div>
 
@@ -99,12 +128,12 @@
     <!-- Bottom bar: caption + dots -->
     <div class="jumbotron-footer">
       <div class="jumbotron-caption active" data-caption="0">
-        <p class="text-blue-200 text-xs uppercase tracking-widest font-semibold mb-0.5">Telecommunications Infrastructure</p>
-        <p class="text-white text-sm md:text-lg font-bold">Tower Facilities Nationwide</p>
-      </div>
-      <div class="jumbotron-caption" data-caption="1">
         <p class="text-blue-200 text-xs uppercase tracking-widest font-semibold mb-0.5">Site Coverage</p>
         <p class="text-white text-sm md:text-lg font-bold">Hilltop &amp; Coastal Network Sites</p>
+      </div>
+      <div class="jumbotron-caption" data-caption="1">
+        <p class="text-blue-200 text-xs uppercase tracking-widest font-semibold mb-0.5">Fiber Connectivity</p>
+        <p class="text-white text-sm md:text-lg font-bold">Precision Links Across the Network</p>
       </div>
       <div class="jumbotron-caption" data-caption="2">
         <p class="text-blue-200 text-xs uppercase tracking-widest font-semibold mb-0.5">Operations &amp; Maintenance</p>
