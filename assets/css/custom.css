@@ -58,6 +58,60 @@ body {
   }
 }
 
+.hero-enter {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: heroEnter 0.85s ease forwards;
+}
+
+.hero-enter-delay-1 { animation-delay: 0.85s; }
+.hero-enter-delay-2 { animation-delay: 1.05s; }
+.hero-enter-delay-3 { animation-delay: 1.25s; }
+
+@keyframes heroEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll reveal — only hide after JS arms the system */
+html.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(1.35rem);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+html.js-reveal .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.js-reveal .reveal-left {
+  transform: translateX(-1.25rem);
+}
+
+html.js-reveal .reveal-right {
+  transform: translateX(1.25rem);
+}
+
+html.js-reveal .reveal-left.is-visible,
+html.js-reveal .reveal-right.is-visible {
+  transform: translateX(0);
+}
+
+html.js-reveal .reveal-scale {
+  transform: translateY(0.75rem) scale(0.97);
+}
+
+html.js-reveal .reveal-scale.is-visible {
+  transform: translateY(0) scale(1);
+}
+
 .hero-bg {
   background: #F5F8FC;
 }
@@ -127,6 +181,22 @@ body {
   object-fit: cover;
   object-position: center;
   display: block;
+  transform: scale(1.04);
+  transition: transform 7s ease-out;
+}
+
+.jumbotron-slide.active img {
+  transform: scale(1);
+  animation: jumbotron-kenburns 8s ease-out forwards;
+}
+
+@keyframes jumbotron-kenburns {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .jumbotron-network {
@@ -349,6 +419,8 @@ body {
   object-fit: cover;
   object-position: center;
   display: block;
+  transform: scale(1.06);
+  animation: pageHeroMedia 1.2s ease forwards;
 }
 
 .page-hero-overlay {
@@ -358,12 +430,51 @@ body {
     rgba(12, 48, 92, 0.65) 55%,
     rgba(12, 48, 92, 0.4) 100%
   );
+  opacity: 0;
+  animation: pageHeroFade 0.8s ease 0.1s forwards;
 }
 
 .page-hero-content {
   position: relative;
   z-index: 1;
   width: 100%;
+}
+
+.page-hero-content > * {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: pageHeroEnter 0.75s ease forwards;
+}
+
+.page-hero-content > *:nth-child(1) { animation-delay: 0.2s; }
+.page-hero-content > *:nth-child(2) { animation-delay: 0.4s; }
+.page-hero-content > *:nth-child(3) { animation-delay: 0.55s; }
+.page-hero-content > *:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes pageHeroMedia {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes pageHeroFade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageHeroEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* First content section after page hero — entrance on load */
+.page-enter {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  animation: pageHeroEnter 0.75s ease forwards;
 }
 
 /* Lightbox */
@@ -793,16 +904,37 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-keyword {
+  .hero-keyword,
+  .hero-enter,
+  .page-hero-content > *,
+  .page-hero-media img,
+  .page-hero-overlay,
+  .page-enter {
     opacity: 1;
     transform: none;
     animation: none;
   }
 
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
   .jumbotron-slide,
+  .jumbotron-slide img,
   .jumbotron-caption,
   .card-hover {
     transition: none;
+    animation: none;
+  }
+
+  .jumbotron-slide.active img {
+    transform: none;
+    animation: none;
   }
 
   .jumbotron-network-arcs path,
