@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPageContentEnter();
   initReveal();
   initCounters();
+  initVisitorCounter();
 });
 
 function initPageContentEnter() {
@@ -150,6 +151,60 @@ function initCounters() {
 
   counters.forEach((el) => observer.observe(el));
 }
+
+function initVisitorCounter() {
+  const root = document.querySelector('[data-visitor-counter]');
+  if (!root) return;
+
+  const COUNTER_KEY = 'karyaehsan-my-visits';
+  const SESSION_FLAG = 'kesb-visit-counted';
+  const CACHE_KEY = 'kesb-visit-count';
+  const API = 'https://countapi.mileshilliard.com/api/v1';
+  const MIN_DIGITS = 6;
+
+  const digitsEl = root.querySelector('[data-visitor-digits]');
+  if (!digitsEl) return;
+
+  function render(count) {
+    const safe = Number.isFinite(count) ? Math.max(0, Math.floor(count)) : 0;
+    const padded = String(safe).padStart(MIN_DIGITS, '0');
+    digitsEl.replaceChildren(
+      ...padded.split('').map((digit) => {
+        const span = document.createElement('span');
+        span.className = 'visitor-counter-digit';
+        span.textContent = digit;
+        return span;
+      })
+    );
+    digitsEl.setAttribute('aria-label', `${safe.toLocaleString('en-MY')} visitors`);
+  }
+
+  const cached = Number(localStorage.getItem(CACHE_KEY));
+  render(Number.isFinite(cached) ? cached : 0);
+
+  const alreadyCounted = sessionStorage.getItem(SESSION_FLAG) === '1';
+  const endpoint = alreadyCounted
+    ? `${API}/get/${COUNTER_KEY}`
+    : `${API}/hit/${COUNTER_KEY}`;
+
+  fetch(endpoint)
+    .then((res) => {
+      if (res.status === 404) return { value: Number.isFinite(cached) ? cached : 0 };
+      if (!res.ok) throw new Error(`Counter request failed (${res.status})`);
+      return res.json();
+    })
+    .then((data) => {
+      const value = Number(data.value);
+      if (!Number.isFinite(value)) return;
+      localStorage.setItem(CACHE_KEY, String(value));
+      if (!alreadyCounted) sessionStorage.setItem(SESSION_FLAG, '1');
+      render(value);
+    })
+    .catch(() => {
+      if (!Number.isFinite(cached)) root.hidden = true;
+    });
+}
+
 function initReveal() {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
