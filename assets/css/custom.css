@@ -529,29 +529,25 @@ html.js-reveal .reveal-scale.is-visible {
   display: none;
 }
 
-/* Management org chart */
+/* Management org chart — stacked on mobile, 3 department columns on desktop */
 .org-wrap {
   --org-line: #7dd3fc;
   --org-card: #f4efe4;
-  --org-gap: 20px;
+  --org-rail: 1.1rem;      /* x position of the side rail */
+  --org-indent: 2.4rem;    /* where member boxes start */
   background:
     radial-gradient(ellipse 80% 50% at 50% 0%, rgba(27, 95, 168, 0.28) 0%, transparent 55%),
     #050a12;
   border-radius: 1rem;
   padding: 1.25rem 1rem 1rem;
   border: 1px solid rgba(147, 197, 253, 0.12);
+  overflow: hidden;
 }
 
-.org-chart ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.org-chart li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .org-node {
@@ -563,49 +559,134 @@ html.js-reveal .reveal-scale.is-visible {
   font-weight: 700;
   font-size: 0.75rem;
   letter-spacing: 0.04em;
-  line-height: 1.3;
+  line-height: 1.35;
   text-transform: uppercase;
-  text-align: left;
-  padding: 0.8rem 0.9rem 0.95rem;
-  margin: 0.35rem 0;
+  text-align: center;
+  padding: 0.55rem 0.85rem 1.15rem;
+  margin: 0;
   border-radius: 0.5rem;
   width: 100%;
   border: 1px solid rgba(165, 243, 252, 0.4);
   box-shadow: 0 0 16px rgba(125, 211, 252, 0.12);
 }
 
+.org-level {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #1B5FA8;
+  margin-bottom: 0.3rem;
+}
+
+.org-node--lead {
+  max-width: 16rem;
+  font-size: 0.85rem;
+  padding-top: 0.7rem;
+  padding-bottom: 1.2rem;
+}
+
+.org-node--l2 {
+  font-size: 0.75rem;
+}
+
+.org-node--report {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.45rem 0.7rem 1rem;
+  background: #f8f5ee;
+}
+
+.org-node--report .org-level {
+  color: #64748b;
+}
+
 .org-node::after {
   content: "";
   position: absolute;
   bottom: 6px;
-  left: 1rem;
+  left: 50%;
   width: 2.25rem;
   height: 6px;
   border-radius: 999px;
+  transform: translateX(-50%);
 }
 
-.org-node--board::after,
+.org-node--board::after {
+  background: #2563eb;
+}
+
 .org-node--admin::after {
   background: #eab308;
-}
-
-.org-node--md::after {
-  background: #2563eb;
 }
 
 .org-node--project::after {
   background: #9ca3af;
 }
 
-.org-node--prod::after,
 .org-node--fiber::after {
   background: #0f766e;
 }
 
-.org-chart ul ul {
-  margin: 0.15rem 0 0.35rem 0.85rem;
-  padding-left: 0.75rem;
-  border-left: 1px solid var(--org-line);
+.org-connector {
+  width: 1px;
+  height: 1.15rem;
+  background: var(--org-line);
+  flex-shrink: 0;
+}
+
+.org-departments {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+.org-dept {
+  min-width: 0;
+}
+
+.org-dept > .org-node {
+  position: relative;
+}
+
+.org-dept ul {
+  margin: 1rem 0 0;
+  padding: 0 0 0 var(--org-indent);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+/* one continuous side rail: from the head's bottom down to the last member */
+.org-dept ul::before {
+  content: "";
+  position: absolute;
+  left: var(--org-rail);
+  top: -1rem;
+  bottom: 1.8rem;
+  width: 1px;
+  background: var(--org-line);
+}
+
+.org-dept li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+/* stub from the rail across to each member box */
+.org-dept li::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--org-rail) - var(--org-indent));
+  top: 50%;
+  width: calc(var(--org-indent) - var(--org-rail));
+  height: 1px;
+  background: var(--org-line);
 }
 
 .org-legend {
@@ -637,123 +718,53 @@ html.js-reveal .reveal-scale.is-visible {
 .org-legend-dot--board { background: #2563eb; }
 .org-legend-dot--admin { background: #eab308; }
 .org-legend-dot--project { background: #9ca3af; }
-.org-legend-dot--prod,
 .org-legend-dot--fiber { background: #0f766e; }
 
 @media (min-width: 1024px) {
   .org-wrap {
-    padding: 1.75rem 1.25rem 1.25rem;
-    overflow-x: auto;
+    padding: 1.75rem 1.5rem 1.25rem;
   }
 
-  .org-chart {
-    width: max-content;
-    min-width: 100%;
+  .org-connector {
+    height: 1.35rem;
   }
 
-  .org-chart ul {
-    display: flex;
-    justify-content: center;
+  .org-departments {
+    --org-col-gap: 1.25rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--org-col-gap);
     position: relative;
-    padding-top: var(--org-gap);
-    margin: 0;
-    border-left: 0;
+    padding-top: 1.15rem;
   }
 
-  .org-chart > ul {
-    width: max-content;
-    min-width: 100%;
-    margin-inline: auto;
-  }
-
-  .org-chart ul ul {
-    margin: 0;
-    padding-left: 0;
-    border-left: 0;
-  }
-
-  .org-chart ul::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: 50%;
-    width: 1px;
-    height: calc(var(--org-gap) + 3px);
-    background: var(--org-line);
-    transform: translateX(-50%);
-  }
-
-  .org-chart li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    padding: var(--org-gap) 10px 0;
-    flex: 0 0 auto;
-  }
-
-  .org-chart li::before {
+  /* horizontal bus spans centre-to-centre of the outer columns */
+  .org-departments::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 1px;
-    height: calc(var(--org-gap) + 2px);
-    background: var(--org-line);
-    transform: translateX(-50%);
-  }
-
-  .org-chart li::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    left: calc((100% - 2 * var(--org-col-gap)) / 6);
+    right: calc((100% - 2 * var(--org-col-gap)) / 6);
     height: 1px;
     background: var(--org-line);
   }
 
-  .org-chart li:first-child::after {
+  .org-dept {
+    position: relative;
+  }
+
+  .org-dept::before {
+    content: "";
+    position: absolute;
+    top: 0;
     left: 50%;
-    width: 50%;
-  }
-
-  .org-chart li:last-child::after {
-    left: 0;
-    width: 50%;
-  }
-
-  .org-chart li:only-child::after {
-    display: none;
-  }
-
-  .org-chart > ul {
-    padding-top: 0;
-  }
-
-  .org-chart > ul::before,
-  .org-chart > ul > li::before,
-  .org-chart > ul > li::after {
-    display: none;
-  }
-
-  .org-chart > ul > li {
-    padding-top: 0;
-  }
-
-  .org-node {
-    width: 11.25rem;
-    min-width: 11.25rem;
-    max-width: 11.25rem;
-    margin: 0;
-    text-align: center;
-    font-size: 0.68rem;
-    padding: 0.7rem 0.8rem 1.15rem;
-  }
-
-  .org-node::after {
-    left: 50%;
+    width: 1px;
+    height: 1.15rem;
+    background: var(--org-line);
     transform: translateX(-50%);
+  }
+
+  .org-dept > .org-node {
+    margin-top: 1.15rem;
   }
 }
 

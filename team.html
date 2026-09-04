@@ -64,36 +64,80 @@
       <p class="text-slate-600 mb-8 max-w-3xl">Experienced professionals across administration, finance, infrastructure and fibre optic — supporting facility development, consultancy and outsourcing for telecommunications service providers.</p>
 
       <div class="org-wrap">
-        <div class="org-chart" role="img" aria-label="KESB management structure: Director, then Administration and Finance, Infrastructure, and Fibre Optic teams.">
-          <ul>
-            <li>
-              <div class="org-node org-node--board">Director</div>
+        <div class="org-chart" aria-label="KESB management structure in three levels: Director, department heads, then executives.">
+          <div class="org-node org-node--board org-node--lead">
+            <span class="org-level">Level 1</span>
+            Director
+          </div>
+          <div class="org-connector" aria-hidden="true"></div>
+          <div class="org-departments">
+            <section class="org-dept">
+              <h3 class="org-node org-node--admin org-node--l2">
+                <span class="org-level">Level 2</span>
+                Head of Administration &amp; Finance Department
+              </h3>
               <ul>
                 <li>
-                  <div class="org-node org-node--admin">Head of Administration &amp; Finance Department</div>
-                  <ul>
-                    <li><div class="org-node org-node--admin">Project Admin Executive</div></li>
-                    <li><div class="org-node org-node--admin">Finance Executive</div></li>
-                  </ul>
+                  <div class="org-node org-node--admin org-node--report">
+                    <span class="org-level">Level 3</span>
+                    Project Admin Executive
+                  </div>
                 </li>
                 <li>
-                  <div class="org-node org-node--project">Project Manager of Infrastructure</div>
-                  <ul>
-                    <li><div class="org-node org-node--project">Project Engineer</div></li>
-                    <li><div class="org-node org-node--project">Site Acquisition Manager</div></li>
-                    <li><div class="org-node org-node--project">Permitting Executive</div></li>
-                  </ul>
-                </li>
-                <li>
-                  <div class="org-node org-node--fiber">Project Manager of Fibre Optic</div>
-                  <ul>
-                    <li><div class="org-node org-node--fiber">Project Engineer</div></li>
-                    <li><div class="org-node org-node--fiber">Permitting Executive</div></li>
-                  </ul>
+                  <div class="org-node org-node--admin org-node--report">
+                    <span class="org-level">Level 3</span>
+                    Finance Executive
+                  </div>
                 </li>
               </ul>
-            </li>
-          </ul>
+            </section>
+            <section class="org-dept">
+              <h3 class="org-node org-node--project org-node--l2">
+                <span class="org-level">Level 2</span>
+                Project Manager of Infrastructure
+              </h3>
+              <ul>
+                <li>
+                  <div class="org-node org-node--project org-node--report">
+                    <span class="org-level">Level 3</span>
+                    Project Engineer
+                  </div>
+                </li>
+                <li>
+                  <div class="org-node org-node--project org-node--report">
+                    <span class="org-level">Level 3</span>
+                    Site Acquisition Manager
+                  </div>
+                </li>
+                <li>
+                  <div class="org-node org-node--project org-node--report">
+                    <span class="org-level">Level 3</span>
+                    Permitting Executive
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section class="org-dept">
+              <h3 class="org-node org-node--fiber org-node--l2">
+                <span class="org-level">Level 2</span>
+                Project Manager of Fibre Optic
+              </h3>
+              <ul>
+                <li>
+                  <div class="org-node org-node--fiber org-node--report">
+                    <span class="org-level">Level 3</span>
+                    Project Engineer
+                  </div>
+                </li>
+                <li>
+                  <div class="org-node org-node--fiber org-node--report">
+                    <span class="org-level">Level 3</span>
+                    Permitting Executive
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
         <ul class="org-legend" aria-hidden="true">
           <li><span class="org-legend-dot org-legend-dot--board"></span> Leadership</li>
