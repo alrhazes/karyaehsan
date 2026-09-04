@@ -752,13 +752,14 @@ html.js-reveal .reveal-scale.is-visible {
     position: relative;
   }
 
+  /* drop from the bus down into each department head (spans padding + margin) */
   .org-dept::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -1.15rem;
     left: 50%;
     width: 1px;
-    height: 1.15rem;
+    height: 2.3rem;
     background: var(--org-line);
     transform: translateX(-50%);
   }
