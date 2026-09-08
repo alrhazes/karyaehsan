@@ -259,23 +259,32 @@
   </section>
 
   <!-- About Preview -->
-  <section class="py-20">
+  <section class="py-20 overflow-hidden">
     <div class="max-w-screen-xl mx-auto px-4">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="reveal reveal-left" data-reveal>
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div class="lg:col-span-5 reveal reveal-left" data-reveal>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-kesb-blue mb-3">Built for connected communities</p>
           <h2 class="text-3xl md:text-4xl font-bold text-gradient-kesb mb-6">About KESB</h2>
-          <p class="text-slate-600 mb-4">
-            Karya Ehsan Sdn Bhd ("KESB") was incorporated on 9 September 2015 in Malaysia and is a 100% Bumiputra company. KESB is a specialist in telecommunications infrastructure projects providing end-to-end solutions including site acquisition, engineering, construction and installation.
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Since 2015, Karya Ehsan Sdn Bhd has delivered end-to-end telecommunications infrastructure across Malaysia—from site acquisition and engineering to construction, installation and long-term maintenance.
           </p>
-          <p class="text-slate-600 mb-6">
-            KESB also provides consultancy, project management and site maintenance services for telecommunications projects throughout Malaysia. KESB's skill and strong principles have gained trust from many service providers including incumbent telecommunications service providers.
-          </p>
+          <div class="flex flex-wrap gap-2 mb-7" aria-label="KESB core capabilities">
+            <span class="rounded-full bg-blue-50 px-3 py-1.5 text-sm font-medium text-kesb-navy">Site acquisition</span>
+            <span class="rounded-full bg-blue-50 px-3 py-1.5 text-sm font-medium text-kesb-navy">Engineering</span>
+            <span class="rounded-full bg-blue-50 px-3 py-1.5 text-sm font-medium text-kesb-navy">Construction</span>
+            <span class="rounded-full bg-blue-50 px-3 py-1.5 text-sm font-medium text-kesb-navy">Maintenance</span>
+          </div>
           <a href="about.html" class="inline-flex items-center text-kesb-blue font-semibold hover:underline">
-            Learn More About Us <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            Discover Our Story <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
         </div>
-        <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm reveal reveal-right" data-reveal data-reveal-delay="120">
-          <img src="assets/images/pdf/page-08-00.jpeg" alt="KG Ayer Paabas - 30M RDS" class="w-full h-64 object-cover">
+        <div class="lg:col-span-7 reveal reveal-right" data-reveal data-reveal-delay="120">
+          <div class="relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-900 shadow-xl shadow-slate-900/10">
+            <video class="w-full aspect-video object-cover" autoplay muted loop playsinline controls preload="metadata" poster="assets/images/pdf/page-08-00.jpeg" aria-label="KESB telecommunications infrastructure overview">
+              <source src="assets/videos/about-kesb.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+          </div>
         </div>
       </div>
     </div>
